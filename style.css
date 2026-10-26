@@ -1,0 +1,1146 @@
+
+/* =====================================
+   JD COLLECTION - DESIGN NOIR ET OR
+   ===================================== */
+
+:root {
+    --noir: #0b0b0b;
+    --noir-doux: #151515;
+    --or: #d4af37;
+    --or-clair: #f4d675;
+    --blanc: #ffffff;
+    --gris: #b8b8b8;
+    --fond: #f5f3ee;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fond);
+    color: #191919;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #050505, #202020);
+    color: var(--blanc);
+    text-align: center;
+    padding: 35px 20px 25px;
+    border-bottom: 3px solid var(--or);
+}
+
+header h1 {
+    margin: 0;
+    color: var(--or);
+    font-size: clamp(30px, 5vw, 48px);
+    font-weight: 900;
+    letter-spacing: 4px;
+}
+
+header p {
+    margin: 8px 0 22px;
+    color: #eeeeee;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+nav a {
+    color: var(--blanc);
+    text-decoration: none;
+    padding: 9px 16px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    transition: 0.25s;
+}
+
+nav a:hover {
+    color: var(--or-clair);
+    border-color: var(--or);
+}
+
+main {
+    width: min(1200px, 94%);
+    margin: 30px auto;
+}
+
+h2 {
+    color: var(--noir);
+    margin-top: 0;
+}
+
+#boutique {
+    scroll-margin-top: 20px;
+}
+
+.panier,
+#informations-client,
+.paiement {
+    background: var(--blanc);
+    padding: 24px;
+    margin: 25px 0;
+    border-radius: 12px;
+    border: 1px solid #e1d7b8;
+    box-shadow: 0 5px 18px #0000000b;
+}
+
+.panier h2,
+#informations-client h2,
+.paiement h2 {
+    border-bottom: 2px solid var(--or);
+    padding-bottom: 10px;
+}
+
+.total-panier {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    padding: 11px 16px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+#vider-panier {
+    background: #e7e7e7;
+    color: #222;
+    margin: 5px;
+}
+
+#passer-commande,
+#formulaire-client button {
+    background: var(--noir);
+    color: var(--or-clair);
+    border: 1px solid var(--or);
+    margin: 5px;
+}
+
+#passer-commande:hover,
+#formulaire-client button:hover {
+    background: #292929;
+}
+
+#formulaire-client {
+    display: grid;
+    gap: 9px;
+}
+
+#formulaire-client label,
+.label-pointure {
+    font-weight: bold;
+}
+
+#formulaire-client input,
+.pointure {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #d1d1d1;
+    border-radius: 6px;
+    background: #fff;
+    color: #222;
+    font: inherit;
+}
+
+#formulaire-client input:focus,
+.pointure:focus {
+    outline: 2px solid var(--or);
+    border-color: var(--or);
+}
+
+.produits {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin: 30px 0;
+}
+
+.produit {
+    min-width: 0;
+    background: var(--blanc);
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #e4dfd1;
+    box-shadow: 0 5px 18px #0000000c;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.produit:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px #00000017;
+}
+
+
+.produit h3 {
+    color: #171717;
+    margin: 15px 0 5px;
+    font-size: 18px;
+}
+
+.prix {
+    color: #8b6b0a;
+    font-size: 21px;
+    font-weight: 800;
+    margin: 8px 0 14px;
+}
+
+.label-pointure {
+    display: block;
+    margin: 12px 0 5px;
+}
+
+.produit button {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    background: var(--noir);
+    color: var(--or-clair);
+    border: 1px solid var(--or);
+}
+
+.produit button:hover {
+    background: #292929;
+}
+
+.produit .ajouter-panier {
+    background: var(--or);
+    color: #111;
+    font-weight: bold;
+}
+
+.produit .ajouter-panier:hover {
+    background: var(--or-clair);
+}
+
+.choix-paiement {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.choix-paiement label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.info-paiement {
+    color: #666;
+    font-size: 14px;
+}
+
+footer {
+    background: var(--noir);
+    color: var(--gris);
+    text-align: center;
+    padding: 25px 15px;
+    border-top: 3px solid var(--or);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Tablettes */
+@media (max-width: 900px) {
+    .produits {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .produit img {
+        height: 180px;
+    }
+}
+
+/* Téléphones */
+@media (max-width: 520px) {
+    header {
+        padding: 25px 12px;
+    }
+
+    header h1 {
+        letter-spacing: 2px;
+    }
+
+    nav {
+        gap: 5px;
+    }
+
+    nav a {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    main {
+        width: 94%;
+        margin: 18px auto;
+    }
+
+    .produits {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .produit {
+        padding: 9px;
+    }
+
+    .produit img {
+        height: 135px;
+    }
+
+    .produit h3 {
+        font-size: 15px;
+    }
+
+    .prix {
+        font-size: 17px;
+    }
+
+    .produit button {
+        padding: 9px 5px;
+        font-size: 13px;
+    }
+
+    .panier,
+    #informations-client,
+    .paiement {
+        padding: 16px;
+    }
+
+    .choix-paiement {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+/* AMELIORATION DES PHOTOS SUR TELEPHONE */
+@media (max-width: 520px) {
+    .produit img {
+    height: 230px;
+    padding: 0;
+    object-fit: contain;
+    }
+
+    .produit {
+        padding: 8px;
+        border-radius: 12px;
+    }
+}
+
+/* AMELIORATION DES PHOTOS SUR TELEPHONE */
+@media (max-width: 520px) {
+    .produit img {
+        height: 135px;
+        padding: 0px;
+        object-fit: contain;
+    }
+
+    .produit {
+        padding: 8px;
+        border-radius: 12px;
+    }
+}
+
+/* AMELIORATION DES PHOTOS SUR TELEPHONE */
+@media (max-width: 520px) {
+    .produit img {
+        height: 160px;
+        padding: 5px;
+        object-fit: contain;
+    }
+
+    .produit {
+        padding: 8px;
+        border-radius: 12px;
+    }
+}
+
+/* AMELIORATION DES PHOTOS SUR TELEPHONE */
+@media (max-width: 520px) {
+    .produit img {
+        height: 160px;
+        padding: 5px;
+        object-fit: contain;
+    }
+
+    .produit {
+        padding: 8px;
+        border-radius: 12px;
+    }
+}
+
+}
+
+
+/* BANNIÈRE D'ACCUEIL JD COLLECTION */
+.banniere-accueil {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.65)),
+        url("./image/fond-jd.png.png") center center / cover no-repeat;
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 20px;
+    margin: 20px auto;
+    border-bottom: 4px solid #d4af37;
+    border-radius: 12px;
+    max-width: 1200px;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banniere-accueil .surtitre {
+    color: #d4af37;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+.banniere-accueil h2 {
+    color: #d4af37;
+    font-size: 42px;
+    margin: 20px 0;
+    font-weight: 900;
+}
+
+.banniere-accueil p {
+    line-height: 1.7;
+}
+
+.bouton-boutique {
+    display: inline-block;
+    background: #d4af37;
+    color: #111111;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 25px;
+    margin-top: 20px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.bouton-boutique:hover {
+    background: #ffffff;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 600px) {
+    .banniere-accueil {
+        padding: 45px 15px;
+    }
+
+    .banniere-accueil h2 {
+        font-size: 30px;
+    }
+}
+
+/* AMÉLIORATION DES CARTES PRODUITS */
+#boutique .produit,
+#boutique .product,
+#boutique .carte-produit {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#boutique .produit:hover,
+#boutique .product:hover,
+#boutique .carte-produit:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.2);
+}
+
+
+#boutique img:not(.produit img) {
+    width: 80%;;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* BOUTON WHATSAPP FLOTTANT */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,.3);
+    transition: transform .25s ease;
+    z-index: 9999;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width:600px){
+    .whatsapp-float{
+        width:55px;
+        height:55px;
+        bottom:20px;
+        right:20px;
+    }
+}
+/* ÉTIQUETTES DES PRODUITS */
+.produit {
+    position: relative;
+}
+
+.badge-produit {
+    display: inline-block;
+    background: #d4af37;
+    color: #111;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    padding: 7px 10px;
+    margin: 8px 0;
+    border-radius: 3px;
+}
+
+/* BADGE NOUVEAU */
+.badge-nouveau {
+    display: inline-block;
+    background: #ffffff;
+    color: #111111;
+    border: 2px solid #d4af37;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    padding: 7px 10px;
+    margin: 8px 0;
+    border-radius: 3px;
+}
+
+/* BARRE DE RECHERCHE */
+.recherche-boutique {
+    max-width: 600px;
+    margin: 25px auto;
+    padding: 0 15px;
+}
+
+#recherche-chaussures {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #d4af37;
+    border-radius: 8px;
+    background: #181818;
+    color: white;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+#recherche-chaussures:focus {
+    outline: 2px solid #d4af37;
+}
+
+/* ALIGNEMENT DES PHOTOS DES SACS FOU-TOUT */
+#photo-fou-tout {
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: contain;
+    object-position: center;
+    background: #f4f4f4;
+    border-radius: 8px;
+}
+/* Centrer les images des chaussures */
+.product-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+/* Affichage des images */
+.product-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    margin: 0 auto;
+}
+/* Centrer les images des chaussures */
+.product-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+/* Affichage des images */
+.product-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    margin: 0 auto;
+}
+/* =====================================
+   PHOTOS JD COLLECTION — CENTRAGE
+   ===================================== */
+
+/* Photos dans les cartes des produits */
+.produit img {
+    display: block;
+    width: 100%;
+    max-width: 240px;
+    height: 190px;
+    margin: 0 auto;
+    padding: 8px;
+    object-fit: contain;
+    object-position: center;
+    background: #ffffff;
+    border-radius: 10px;
+}
+
+/* Conteneur des photos */
+.product-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+}
+
+/* Photos dans ce conteneur */
+.product-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    margin: 0 auto;
+}
+
+/* Adaptation aux téléphones */
+@media (max-width: 520px) {
+    .produit img {
+        width: 100%;
+        max-width: 180px;
+        height: 140px;
+        padding: 4px;
+    }
+
+    .product-image {
+        height: 180px;
+    }
+}
+
+/* ===== EN-TÊTE JD COLLECTION ===== */
+.entete-site {
+    width: 100%;
+    background: #111111;
+    border-bottom: 2px solid #c9a227;
+    position: relative;
+    z-index: 100;
+}
+
+.barre-haute {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 18px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.logo-jd {
+    color: #d4af37;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.menu-principal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.menu-principal a,
+.lien-panier {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.menu-principal a:hover,
+.lien-panier:hover {
+    color: #d4af37;
+}
+
+.lien-panier {
+    border: 1px solid #d4af37;
+    border-radius: 4px;
+    padding: 10px 15px;
+    white-space: nowrap;
+}
+
+/* Adaptation aux téléphones */
+@media (max-width: 650px) {
+    .barre-haute {
+        flex-direction: column;
+        gap: 18px;
+        padding: 20px 12px;
+    }
+
+    .menu-principal {
+        gap: 15px;
+    }
+
+    .menu-principal a,
+    .lien-panier {
+        font-size: 13px;
+    }
+}
+
+/* ===== CARTES PRODUITS JD COLLECTION ===== */
+
+#boutique {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 50px 5%;
+}
+
+#boutique > h2 {
+    color: #171717;
+    font-size: clamp(25px, 4vw, 36px);
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+#boutique > p {
+    text-align: center;
+    color: #666666;
+    margin-bottom: 30px;
+}
+
+.produits {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    align-items: stretch;
+}
+
+.produit {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    min-width: 0;
+}
+
+.produit:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.10);
+}
+
+.produit img {
+    display: block;
+    width: 100%;
+    height: 210px;
+    object-fit: contain;
+    object-position: center;
+    background: #ffffff;
+    border-radius: 5px;
+    cursor: zoom-in;
+}
+
+.produit h3 {
+    color: #171717;
+    font-size: 16px;
+    margin: 15px 0 8px;
+    line-height: 1.4;
+}
+
+.produit .prix {
+    color: #171717;
+    font-size: 18px;
+    font-weight: 800;
+    margin: 5px 0 14px;
+}
+
+.produit label {
+    font-size: 13px;
+    font-weight: 600;
+    margin: 8px 0 5px;
+}
+
+.produit select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    background: #ffffff;
+    margin-bottom: 10px;
+}
+
+.produit .ajouter-panier {
+    width: 100%;
+    margin-top: auto;
+    padding: 12px 10px;
+    background: #111111;
+    color: #d4af37;
+    border: 1px solid #111111;
+    border-radius: 4px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.produit .ajouter-panier:hover {
+    background: #d4af37;
+    color: #111111;
+}
+
+/* Tablettes */
+@media (max-width: 1000px) {
+    .produits {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+    }
+}
+
+/* Téléphones */
+@media (max-width: 650px) {
+    #boutique {
+        padding: 30px 12px;
+    }
+
+    .produits {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .produit {
+        padding: 10px;
+    }
+
+    .produit img {
+        height: 150px;
+    }
+
+    .produit h3 {
+        font-size: 14px;
+    }
+
+    .produit .prix {
+        font-size: 16px;
+    }
+
+    .produit .ajouter-panier {
+        font-size: 12px;
+        padding: 10px 5px;
+    }
+}
+
+/* ===== EFFET AU SURVOL DES PHOTOS ===== */
+
+#boutique .produit img {
+    transition: transform 0.35s ease, filter 0.35s ease;
+    transform-origin: center;
+}
+
+#boutique .produit img:hover {
+    transform: scale(1.06);
+    filter: brightness(1.05);
+}
+
+/* ===== EFFET PROFESSIONNEL DES CARTES PRODUITS ===== */
+
+#boutique .produit {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+}
+
+#boutique .produit:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+/* ===== BOUTONS NOIR ET OR JD COLLECTION ===== */
+
+#boutique .produit button,
+#boutique .produit .bouton,
+#boutique .produit input[type="button"],
+#boutique .produit input[type="submit"] {
+    background-color: #111111;
+    color: #d4af37;
+    border: 1px solid #d4af37;
+    border-radius: 6px;
+    padding: 12px 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+#boutique .produit button:hover,
+#boutique .produit .bouton:hover,
+#boutique .produit input[type="button"]:hover,
+#boutique .produit input[type="submit"]:hover {
+    background-color: #d4af37;
+    color: #111111;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(212, 175, 55, 0.3);
+}
+
+/* BOUTON DORE - JD COLLECTION */
+.bouton-banniere {
+    display: inline-block;
+    background: linear-gradient(135deg, #f5d778, #d4af37);
+    color: #111111;
+    padding: 15px 30px;
+    margin-top: 15px;
+    border: 2px solid #d4af37;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.bouton-banniere:hover {
+    background: #111111;
+    color: #f5d778;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+/* ===== AVIS CLIENTS JD COLLECTION ===== */
+
+.section-avis {
+    background: #111111;
+    color: #ffffff;
+    padding: 65px 20px;
+    margin: 35px auto;
+    max-width: 1200px;
+    border-top: 3px solid #d4af37;
+    border-bottom: 3px solid #d4af37;
+    border-radius: 12px;
+}
+
+.entete-avis {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 35px;
+}
+
+.surtitre-avis {
+    color: #d4af37;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.entete-avis h2 {
+    color: #f5d778;
+    font-size: 30px;
+    margin: 15px 0;
+}
+
+.entete-avis p {
+    line-height: 1.7;
+}
+
+.grille-avis {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.carte-avis {
+    background: #1c1c1c;
+    padding: 28px 22px;
+    border: 1px solid #4b4124;
+    border-radius: 10px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.carte-avis:hover {
+    transform: translateY(-5px);
+    border-color: #d4af37;
+}
+
+.etoiles-avis {
+    color: #f5d778;
+    font-size: 23px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.carte-avis h3 {
+    color: #f5d778;
+    margin-bottom: 12px;
+}
+
+.carte-avis p {
+    color: #dddddd;
+    line-height: 1.7;
+}
+
+.auteur-avis {
+    display: block;
+    margin-top: 20px;
+    color: #d4af37;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .grille-avis {
+        grid-template-columns: 1fr;
+    }
+
+    .section-avis {
+        padding: 40px 16px;
+        margin: 20px 10px;
+    }
+
+    .entete-avis h2 {
+        font-size: 24px;
+    }
+}
+
+/* ===== FORMULAIRE AVIS CLIENTS JD COLLECTION ===== */
+
+.formulaire-avis {
+    max-width: 650px;
+    margin: 45px auto 10px;
+    padding: 30px;
+    background: #1c1c1c;
+    border: 1px solid #d4af37;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+.formulaire-avis h3 {
+    color: #f5d778;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.formulaire-avis > p {
+    color: #dddddd;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.formulaire-avis label {
+    display: block;
+    color: #f5d778;
+    margin: 20px 0 8px;
+    font-weight: bold;
+}
+
+.formulaire-avis input,
+.formulaire-avis select,
+.formulaire-avis textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #111111;
+    color: #ffffff;
+    border: 1px solid #555555;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font: inherit;
+}
+
+.formulaire-avis input:focus,
+.formulaire-avis select:focus,
+.formulaire-avis textarea:focus {
+    outline: 2px solid #d4af37;
+    border-color: #d4af37;
+}
+
+.formulaire-avis textarea {
+    resize: vertical;
+}
+
+.bouton-avis {
+    display: block;
+    width: 100%;
+    margin-top: 24px;
+    padding: 15px;
+    background: linear-gradient(135deg, #f5d778, #d4af37);
+    color: #111111;
+    border: 0;
+    border-radius: 6px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.bouton-avis:hover {
+    background: #111111;
+    color: #f5d778;
+    outline: 1px solid #d4af37;
+}
+
+#message-avis {
+    margin-top: 15px;
+    color: #f5d778;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .formulaire-avis {
+        padding: 20px 15px;
+    }
+
+    .formulaire-avis h3 {
+        font-size: 21px;
+    }
+}

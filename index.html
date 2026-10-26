@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JD COLLECTION | Chaussures pour hommes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<header class="entete-site">
+    <div class="barre-haute">
+        <a href="#accueil" class="logo-jd">JD COLLECTION</a>
+
+        <nav class="menu-principal">
+            <a href="#accueil">Accueil</a>
+            <a href="#boutique">Chaussures</a>
+            <a href="#mon-panier">Mon panier</a>
+            <a href="#informations-client">Contact</a>
+        </nav>
+
+        <a href="#mon-panier" class="lien-panier">
+            Panier
+        </a>
+    </div>
+</header>
+
+<!-- ===== BANNIÈRE D'ACCUEIL JD COLLECTION ===== -->
+<section class="banniere-accueil" id="accueil">
+    <div class="contenu-banniere">
+        <p class="surtitre-banniere">LE STYLE. L'ATTITUDE. LA SIGNATURE.</p>
+
+        <h1>JD COLLECTION</h1>
+
+        <p class="texte-banniere">
+            Affirme ton style. Marque ta différence.
+        </p>
+
+        <a href="#boutique" class="bouton-banniere">
+            DÉCOUVRIR LA COLLECTION
+        </a>
+    </div>
+</section>
+<!-- ===== FIN DE LA BANNIÈRE ===== -->
+
+<main>
+<section id="mon-panier" class="panier">
+    <h2>Mon panier</h2>
+
+    <div id="articles-panier">
+        <p>Ton panier est vide.</p>
+    </div>
+
+    <p class="total-panier">
+        Total : <span id="total-panier">0.00 $ CAD</span>
+    </p>
+
+    <button type="button" id="vider-panier">
+        Vider le panier
+    </button>
+
+    <button type="button" id="passer-commande">
+        Commander sur le site
+    </button>
+</section>
+
+<section id="informations-client">
+    <h2>Informations de livraison</h2>
+    <p>Remplis tes coordonnées pour préparer ta commande.</p>
+
+    <form id="formulaire-client">
+        <label for="nom-client">Nom complet :</label>
+        <input
+            type="text"
+            id="nom-client"
+            name="nom"
+            placeholder="Ton nom complet"
+            required
+        >
+
+        <label for="telephone-client">Téléphone :</label>
+        <input
+            type="tel"
+            id="telephone-client"
+            name="telephone"
+            placeholder="Ton numéro de téléphone"
+            required
+        >
+
+        <label for="adresse-client">Adresse de livraison :</label>
+        <input
+            type="text"
+            id="adresse-client"
+            name="adresse"
+            placeholder="Ton adresse complète"
+            required
+        >
+
+        <label for="ville-client">Ville :</label>
+        <input
+            type="text"
+            id="ville-client"
+            name="ville"
+            placeholder="Ta ville"
+            required
+        >
+
+        <button type="submit">Confirmer ma commande</button>
+    </form>
+</section>
+
+<section id="boutique">
+    <h2>Notre collection de chaussures</h2>
+    <p>Découvre les modèles disponibles chez JD COLLECTION.</p>
+
+<div class="recherche-boutique">
+    <input
+        type="search"
+        id="recherche-chaussures"
+        placeholder="Rechercher Jordan, Adidas, Nike..."
+        aria-label="Rechercher une chaussure"
+    >
+</div>
+
+    <div class="produits">
+
+    <article class="produit">
+    <span class="badge-produit">BEST-SELLER</span>
+        <img src="./image/jordan-4-noir.jpg" alt="Jordan 4 noir rouge">
+
+            <h3>Jordan 4 noir rouge</h3>
+            <p class="prix">100 $ CAD</p>
+            <label class="label-pointure" for="taille-jordan-noir-rouge">Pointure :</label>
+            <select class="pointure" id="taille-jordan-noir-rouge" required>
+                <option value="">Choisir une pointure</option>
+                <option value="39">39</option><option value="40">40</option>
+                <option value="41">41</option><option value="42">42</option>
+                <option value="43">43</option><option value="44">44</option>
+                <option value="45">45</option><option value="46">46</option>
+            </select>
+            <button type="button" class="ajouter-panier commander" data-produit="Jordan 4 noir rouge">Ajouter au panier</button>
+        </article>
+
+        <article class="produit">
+            
+<img src="./image/jordan-4-noire.jpg" alt="Jordan 4 noire">
+            <h3>Jordan 4 noir</h3>
+            <p class="prix">100 $ CAD</p>
+            <label class="label-pointure" for="taille-jordan-noir">Pointure :</label>
+            <select class="pointure" id="taille-jordan-noir" required>
+                <option value="">Choisir une pointure</option>
+                <option value="39">39</option><option value="40">40</option>
+                <option value="41">41</option><option value="42">42</option>
+                <option value="43">43</option><option value="44">44</option>
+                <option value="45">45</option><option value="46">46</option>
+            </select>
+            <button type="button" class="ajouter-panier commander" data-produit="Jordan 4 noir">Ajouter au panier</button>
+        </article>
+         
+         <article class="produit">
+        <span class="badge-nouveau">NOUVEAU</span>
+        <img src="./image/adidas-campus.jpg" alt="Adidas Campus">
+            <h3>Adidas Campus</h3>
+            <p class="prix">90 $ CAD</p>
+            <label class="label-pointure" for="taille-campus">Pointure :</label>
+            <select class="pointure" id="taille-campus" required>
+                <option value="">Choisir une pointure</option>
+                <option value="39">39</option><option value="40">40</option>
+                <option value="41">41</option><option value="42">42</option>
+                <option value="43">43</option><option value="44">44</option>
+                <option value="45">45</option><option value="46">46</option>
+            </select>
+            <button type="button" class="ajouter-panier commander" data-produit="Adidas Campus">Ajouter au panier</button>
+        </article>
+
+        <article class="produit">
+            <img src="./image/adidas-superstar.jpg" alt="Adidas Superstar">
+            <h3>Adidas Superstar</h3>
+            <p class="prix">90 $ CAD</p>
+            <label class="label-pointure" for="taille-superstar">Pointure :</label>
+            <select class="pointure" id="taille-superstar" required>
+                <option value="">Choisir une pointure</option>
+                <option value="39">39</option><option value="40">40</option>
+                <option value="41">41</option><option value="42">42</option>
+                <option value="43">43</option><option value="44">44</option>
+                <option value="45">45</option><option value="46">46</option>
+            </select>
+            <button type="button" class="ajouter-panier commander" data-produit="Adidas Superstar">Ajouter au panier</button>
+        </article>
+
+        <article class="produit">
+        
+    <img src="./image/Jordan-11.jpg" alt="Jordan 11 Cool Grey">
+            <h3>Jordan 11 Cool Grey</h3>
+            <p class="prix">100 $ CAD</p>
+            <label class="label-pointure" for="taille-jordan-11">Pointure :</label>
+            <select class="pointure" id="taille-jordan-11" required>
+                <option value="">Choisir une pointure</option>
+                <option value="39">39</option><option value="40">40</option>
+                <option value="41">41</option><option value="42">42</option>
+                <option value="43">43</option><option value="44">44</option>
+                <option value="45">45</option><option value="46">46</option>
+            </select>
+            <button type="button" class="ajouter-panier commander" data-produit="Jordan 11 Cool Grey">Ajouter au panier</button>
+        </article>
+
+        <article class="produit">
+
+    <img src="./image/air-max-95.jpg" alt="Nike Air Max 95">
+            <h3>Nike Air Max 95</h3>
+            <p class="prix">90 $ CAD</p>
+            <label class="label-pointure" for="taille-air-max">Pointure :</label>
+            <select class="pointure" id="taille-air-max" required>
+                <option value="">Choisir une pointure</option>
+                <option value="39">39</option><option value="40">40</option>
+                <option value="41">41</option><option value="42">42</option>
+                <option value="43">43</option><option value="44">44</option>
+                <option value="45">45</option><option value="46">46</option>
+            </select>
+            <button type="button" class="ajouter-panier commander" data-produit="Nike Air Max 95">Ajouter au panier</button>
+        </article>
+
+        <article class="produit">
+               
+    <img src="./image/air-force-1.jpg" alt="Air Force 1 blanche">
+
+            <h3>Air Force 1 blanche</h3>
+            <p class="prix">80 $ CAD</p>
+            <label class="label-pointure" for="taille-force-blanche">Pointure :</label>
+            <select class="pointure" id="taille-force-blanche" required>
+                <option value="">Choisir une pointure</option>
+                <option value="39">39</option><option value="40">40</option>
+                <option value="41">41</option><option value="42">42</option>
+                <option value="43">43</option><option value="44">44</option>
+                <option value="45">45</option><option value="46">46</option>
+            </select>
+            <button type="button" class="ajouter-panier commander" data-produit="Air Force 1 blanche">Ajouter au panier</button>
+        </article>
+
+        <article class="produit">
+        
+<img src="./image/air-force-1-noire.jpg" alt="Air Force 1 noire">
+            <p class="prix">80 $ CAD</p>
+            <label class="label-pointure" for="taille-force-noire">Pointure :</label>
+            <select class="pointure" id="taille-force-noire" required>
+                <option value="">Choisir une pointure</option>
+                <option value="39">39</option><option value="40">40</option>
+                <option value="41">41</option><option value="42">42</option>
+                <option value="43">43</option><option value="44">44</option>
+                <option value="45">45</option><option value="46">46</option>
+            </select>
+            <button type="button" class="ajouter-panier commander" data-produit="Air Force 1 noire">Ajouter au panier</button>
+        </article>
+
+        <article class="produit">         
+        <img src="./image/Timberland.jpg" alt="Timberland noire">
+            <h3>Timberland noire</h3>
+            <p class="prix">130 $ CAD</p>
+            <label class="label-pointure" for="taille-timberland-noire">Pointure :</label>
+            <select class="pointure" id="taille-timberland-noire" required>
+                <option value="">Choisir une pointure</option>
+                <option value="39">39</option><option value="40">40</option>
+                <option value="41">41</option><option value="42">42</option>
+                <option value="43">43</option><option value="44">44</option>
+                <option value="45">45</option><option value="46">46</option>
+            </select>
+            <button type="button" class="ajouter-panier commander" data-produit="Timberland noire">Ajouter au panier</button>
+        </article>
+
+        <article class="produit">   
+        <img src="./image/Timberland-marron.jpg" alt="Timberland marron">
+            <h3>Timberland marron</h3>
+            <p class="prix">130 $ CAD</p>
+            <label class="label-pointure" for="taille-timberland-marron">Pointure :</label>
+            <select class="pointure" id="taille-timberland-marron" required>
+                <option value="">Choisir une pointure</option>
+                <option value="39">39</option><option value="40">40</option>
+                <option value="41">41</option><option value="42">42</option>
+                <option value="43">43</option><option value="44">44</option>
+                <option value="45">45</option><option value="46">46</option>
+            </select>
+            <button type="button" class="ajouter-panier commander" data-produit="Timberland marron">Ajouter au panier</button>
+        </article>
+
+        <article class="produit">
+            
+<img src="./image/dunk-low-panda.jpg" alt="Dunk Low Panda">
+            <h3>Dunk Low Panda</h3>
+            <p class="prix">90 $ CAD</p>
+            <label class="label-pointure" for="taille-dunk-panda">Pointure :</label>
+            <select class="pointure" id="taille-dunk-panda" required>
+                <option value="">Choisir une pointure</option>
+                <option value="39">39</option><option value="40">40</option>
+                <option value="41">41</option><option value="42">42</option>
+                <option value="43">43</option><option value="44">44</option>
+                <option value="45">45</option><option value="46">46</option>
+            </select>
+            <button type="button" class="ajouter-panier commander" data-produit="Dunk Low Panda">Ajouter au panier</button>
+        </article>
+    <article class="produit">
+    <img
+        id="photo-chanel"
+        src="./image/chanel-belge.jpeg"
+        alt="Chanel beige"
+    >
+            <h3>Chanel</h3>
+            <p class="prix">80 $ CAD</p>
+
+            <label for="couleur-chanel">Couleur :</label>
+            <select id="couleur-chanel" class="couleur-produit">
+                <option value="Noir" data-image="./image/chanel-noir.jpeg">Noir</option>
+                <option value="Rose" data-image="./image/chanel-rose.jpeg">Rose</option>
+                <option value="Marron" data-image="./image/chanel-marron.jpeg">Marron</option>
+                <option value="Gris" data-image="./image/chanel-gris.jpeg">Gris</option>
+                <option value="Beige" data-image="./image/chanel-belge.jpeg" selected>Beige</option>
+            </select>
+
+            <label class="label-pointure" for="taille-chanel">
+                Pointure :
+            </label>
+            <select class="pointure" id="taille-chanel" required>
+                <option value="">Choisir une pointure</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+            </select>
+
+            <button
+                type="button"
+                class="ajouter-panier commander"
+                data-produit="Chanel"
+            >
+                Ajouter au panier
+            </button>
+        </article>
+
+        <article class="produit">
+            <img
+                id="photo-gucci"
+                src="./image/gucci1.jpeg"
+                alt="Sandales Gucci bordeaux"
+            >
+
+            <h3>Sandales Gucci</h3>
+            <p class="prix">80 $ CAD</p>
+
+            <label for="couleur-gucci">Couleur :</label>
+            <select id="couleur-gucci" class="couleur-produit">
+                <option value="Bordeaux" data-image="./image/gucci1.jpeg" selected>Bordeaux</option>
+                <option value="Rouge" data-image="./image/gucci2.jpeg">Rouge</option>
+                <option value="Beige" data-image="./image/gucci3.jpeg">Beige</option>
+            </select>
+
+            <label class="label-pointure" for="taille-gucci">
+                Pointure :
+            </label>
+            <select class="pointure" id="taille-gucci" required>
+                <option value="">Choisir une pointure</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+            </select>
+
+            <button
+                type="button"
+                class="ajouter-panier commander"
+                data-produit="Sandales Gucci"
+            >
+                Ajouter au panier
+            </button>
+        </article>
+        
+<article class="produit">
+    <img
+        id="photo-compense"
+        src="./image/compense1.jpeg"
+        alt="Chaussures compensées beige"
+    >
+
+    <h3>Chaussures compensées</h3>
+    <p class="prix">80 $ CAD</p>
+
+    <label for="couleur-compense">Couleur :</label>
+    <select id="couleur-compense" class="couleur-produit">
+        <option value="Beige" data-image="./image/compense1.jpeg" selected>Beige</option>
+        <option value="Noir" data-image="./image/compenser2.jpeg">Noir</option>
+        <option value="Marron" data-image="./image/compenser3.jpeg">Marron</option>
+    </select>
+
+    <label class="label-pointure" for="taille-compense">
+        Pointure :
+    </label>
+    <select class="pointure" id="taille-compense" required>
+        <option value="">Choisir une pointure</option>
+        <option value="36">36</option>
+        <option value="37">37</option>
+        <option value="38">38</option>
+        <option value="39">39</option>
+        <option value="40">40</option>
+        <option value="41">41</option>
+        <option value="42">42</option>
+    </select>
+
+    <button
+        type="button"
+        class="ajouter-panier commander"
+        data-produit="Chaussures compensées"
+    >
+        Ajouter au panier
+    </button>
+</article>
+
+<article class="produit">
+    <img
+        id="photo-louboutin"
+        src="./image/louboutin-bordeau.jpeg"
+        alt="Sandales à talons Louboutin bordeaux"
+    >
+
+    <h3>Sandales à talons Louboutin</h3>
+    <p class="prix">110 $ CAD</p>
+
+    <label for="couleur-louboutin">Couleur :</label>
+    <select id="couleur-louboutin" class="couleur-produit">
+        <option value="Bordeaux" data-image="./image/louboutin-bordeau.jpeg" selected>Bordeaux</option>
+        <option value="Noir" data-image="./image/louboutin-noir.jpeg">Noir</option>
+        <option value="Rouge" data-image="./image/louboutin-rouge.jpeg">Rouge</option>
+    </select>
+
+    <label class="label-pointure" for="taille-louboutin">
+        Pointure :
+    </label>
+    <select class="pointure" id="taille-louboutin" required>
+        <option value="">Choisir une pointure</option>
+        <option value="36">36</option>
+        <option value="37">37</option>
+        <option value="38">38</option>
+        <option value="39">39</option>
+        <option value="40">40</option>
+        <option value="41">41</option>
+        <option value="42">42</option>
+    </select>
+
+    <button
+        type="button"
+        class="ajouter-panier commander"
+        data-produit="Sandales à talons Louboutin"
+    >
+        Ajouter au panier
+    </button>
+</article>
+
+
+</section>
+
+<!-- ===== AVIS CLIENTS JD COLLECTION ===== -->
+<section class="section-avis" id="avis-clients">
+    <div class="entete-avis">
+        <p class="surtitre-avis">VOTRE SATISFACTION, NOTRE PRIORITÉ</p>
+        <h2>Ce que nos clients pensent de nous</h2>
+        <p>Merci de faire confiance à JD COLLECTION pour affirmer votre style.</p>
+    </div>
+
+    <div class="grille-avis">
+        <article class="carte-avis">
+            <div class="etoiles-avis" aria-label="5 étoiles">★★★★★</div>
+            <h3>Style et qualité</h3>
+            <p>Découvrez nos modèles et trouvez les chaussures qui correspondent à votre style.</p>
+            <span class="auteur-avis">Client JD COLLECTION</span>
+        </article>
+
+        <article class="carte-avis">
+            <div class="etoiles-avis" aria-label="5 étoiles">★★★★★</div>
+            <h3>Une collection tendance</h3>
+            <p>Des sneakers sélectionnées pour compléter vos tenues avec élégance.</p>
+            <span class="auteur-avis">Client JD COLLECTION</span>
+        </article>
+
+        <article class="carte-avis">
+            <div class="etoiles-avis" aria-label="5 étoiles">★★★★★</div>
+            <h3>Merci pour votre confiance</h3>
+            <p>Votre satisfaction nous encourage à vous proposer de nouveaux modèles.</p>
+            <span class="auteur-avis">Client JD COLLECTION</span>
+        </article>
+    
+    </div>
+
+    <!-- FORMULAIRE POUR LES AVIS CLIENTS -->
+    <div class="formulaire-avis">
+        <h3>Partagez votre expérience</h3>
+        <p>Vous avez acheté chez JD COLLECTION ? Votre avis nous intéresse !</p>
+
+        <form id="formulaire-avis">
+            <label for="nom-avis">Votre nom</label>
+            <input type="text" id="nom-avis" placeholder="Entrez votre nom" required>
+
+            <label for="note-avis">Votre note</label>
+            <select id="note-avis" required>
+                <option value="">Choisir une note</option>
+                <option value="5">★★★★★ — Excellent</option>
+                <option value="4">★★★★ — Très bien</option>
+                <option value="3">★★★ — Bien</option>
+                <option value="2">★★ — Moyen</option>
+                <option value="1">★ — À améliorer</option>
+            </select>
+
+            <label for="commentaire-avis">Votre commentaire</label>
+            <textarea id="commentaire-avis" rows="4" placeholder="Racontez votre expérience..." required></textarea>
+
+            <button type="submit" class="bouton-avis">ENVOYER MON AVIS</button>
+            <p id="message-avis" aria-live="polite"></p>
+        </form>
+    </div>
+
+</section>
+<!-- ===== FIN DES AVIS CLIENTS ===== -->
+
+    <div class="choix-paiement">
+        <label>
+            <input type="radio" name="paiement" value="Virement Interac" checked>
+            Virement Interac
+        </label>
+
+        <label>
+            <input type="radio" name="paiement" value="Paiement à la livraison">
+            Paiement à la livraison
+        </label>
+    </div>
+
+    <p class="info-paiement">
+        Les modalités de paiement seront confirmées lors de la commande.
+    </p>
+</section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 JD COLLECTION. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <a href="https://wa.me/15147158896"
+   class="whatsapp-float"
+   target="_blank"
+   aria-label="Contacter JD COLLECTION sur WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="white">
+        <path d="M19.11 17.24c-.29-.14-1.72-.85-1.98-.94-.27-.1-.46-.14-.66.14-.2.29-.76.94-.93 1.13-.17.2-.34.22-.63.07-.29-.14-1.22-.45-2.33-1.43-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.45.13-.6.13-.13.29-.34.43-.5.14-.17.19-.29.29-.49.1-.2.05-.37-.02-.52-.07-.14-.66-1.59-.9-2.18-.24-.57-.49-.49-.66-.5h-.56c-.2 0-.52.07-.79.37-.27.29-1.03 1.01-1.03 2.46s1.06 2.86 1.21 3.06c.14.2 2.08 3.18 5.03 4.46.7.3 1.24.48 1.66.61.7.22 1.33.19 1.83.11.56-.08 1.72-.7 1.96-1.38.24-.67.24-1.25.17-1.38-.07-.13-.27-.2-.56-.34z"/>
+        <path d="M16 3C8.82 3 3 8.82 3 16c0 2.3.6 4.46 1.65 6.33L3 29l6.85-1.61A12.94 12.94 0 0 0 16 29c7.18 0 13-5.82 13-13S23.18 3 16 3zm0 23.5c-1.92 0-3.72-.52-5.27-1.43l-.38-.23-4.07.96.96-3.97-.25-.4A10.44 10.44 0 0 1 5.5 16C5.5 10.2 10.2 5.5 16 5.5S26.5 10.2 26.5 16 21.8 26.5 16 26.5z"/>
+    </svg>
+</a>
+</body>
+</html>
